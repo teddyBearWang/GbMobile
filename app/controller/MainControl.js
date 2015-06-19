@@ -71,6 +71,7 @@ Ext.define('YzMobile.controller.MainControl', {
                     Ext.data.proxy.SkJsonp.setUrl("http://115.236.2.245:38019/data.ashx");
                     Ext.data.proxy.SkJsonp.loadStore(store, 'GetSite', null);
 
+
                     WYTool.queryComponent('main').setActiveItem(Ext.create('YzMobile.view.Site'));
                 }
             },
@@ -451,7 +452,7 @@ Ext.define('YzMobile.controller.MainControl', {
                     Ext.getCmp('maintitle').onDataSet(records[0].data);
                     me.getMain().setActiveItem(me.getFunctionmain());
 
-                    me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
+                  //  me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
 
                     //设置别名
                     //设置tags的时候，传进去的参必须是集合

@@ -167,7 +167,7 @@ Ext.define('YzMobile.controller.WaterControl', {
         Ext.data.proxy.SkJsonp.loadStore(store, 'GetStDaySW', record.data.stcd + '$' + date, {
             success: function(records) {
                 if (records.length == 0) {
-                    Ext.Msg.alert('数据为空');
+                    alert('数据为空');
                 }
                 me.waterline.SelectLineValue(record, date);
                 me.onWaterBarAdd();
@@ -221,6 +221,7 @@ Ext.define('YzMobile.controller.WaterControl', {
         Ext.data.proxy.SkJsonp.loadStore(store, 'GetStSdSW', me.stcd + '$' + start + '$' + end, {
             success: function () {
                 me.getWaterline().onWaterDayDetailValue(start + '至' + end, store);
+                me.getWaterline().onWaterSetTitle(start + '至' + end);
             }
         });
         //store.getProxy().setExtraParams({

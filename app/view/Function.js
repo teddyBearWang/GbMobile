@@ -39,7 +39,7 @@ Ext.define('YzMobile.view.Function', {
             },{
                 xtype:'panel',
                 docked:'bottom',
-                html:'<div style="width: 100%; height: 100%; text-align: center; background-color: #ffffff">Copyright©:杭州定川信息技术有限公司</div>'
+                html:'<div style="width: 100%; height: 100%;font-size: small; text-align: center; background-color: #ffffff">Copyright©:杭州定川信息技术有限公司</div>'
             }
         ]
     }

@@ -124,7 +124,9 @@ Ext.define('YzMobile.view.rain.RainBar', {
         {
             max = Math.max(max,store.getAt(i).data.value);
         }
-        Ext.ComponentQuery.query('#rainchart')[0]._axes[1].setMaximum(max + 1.00);
+
+
+        Ext.ComponentQuery.query('#rainchart')[0]._axes[1].setMaximum(max + 10.00);
 
         Ext.ComponentQuery.query('#rainbartitle')[0].setTitle(title);
 
@@ -133,5 +135,12 @@ Ext.define('YzMobile.view.rain.RainBar', {
 
         YzMobile.app.getController('MainControl').onDateSearchViewHide();
         Ext.Viewport.setMasked(false);
+    },
+
+    onRainSetTitle: function (data) {
+
+        Ext.ComponentQuery.query('#rainbartitle')[0].setTitle(data);
+
+
     }
 });

@@ -371,7 +371,7 @@ Ext.define('YzMobile.controller.ContactControl', {
 
             store.removeAll();
             Ext.data.proxy.SkJsonp.setUrl(localStorage.getItem('proxyUrl'));
-            Ext.data.proxy.SkJsonp.loadStore(store,'GetAdressTree', 'adcd$' + 'adcd$1$' + record.data.Sid + '$true');
+            Ext.data.proxy.SkJsonp.loadStore(store,'GetAdressTree', 'adcd$' + '1$' + record.data.Sid + '$true');
             //store.removeAll();
             //store.getProxy().setExtraParams({
             //    t: 'GetAdressTree',

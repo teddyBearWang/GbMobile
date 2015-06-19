@@ -141,10 +141,18 @@ Ext.define('YzMobile.view.water.WaterLine', {
 
         //Ext.ComponentQuery.query('#rainlinetitle')[0].setTitle(title);
         Ext.ComponentQuery.query('#waterlinetitle1')[0].setTitle(title);
+        //me.onWaterSetTitle(title);
 
         Ext.ComponentQuery.query('#waterchart')[0]._axes[1].setTitle('时间');
 //        Ext.ComponentQuery.query('#waterchart')[0].redraw();
 
         YzMobile.app.getController('MainControl').onDateSearchViewHide();
+    },
+
+    onWaterSetTitle: function (data) {
+
+        Ext.ComponentQuery.query('#waterlinetitle1')[0].setTitle(data);
+
+
     }
 });

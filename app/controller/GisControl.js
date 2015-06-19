@@ -283,21 +283,21 @@ Ext.define('YzMobile.controller.GisControl', {
 
         var me = this;
 
-        AMap.event.addListener(marker,'click',function(){
-            infoWindow.open(me.map,marker.getPosition());
-
-            if(type !="sw" && type !="yl") {
-                me.getStoreProInfo(stcd, infoWindow, stnm, me, type);
-            }
-            else
-            {
-                title = stnm;
-                content = "水位雨量站详细信息正在完善中..."
-                infoWindow.setContent(me.createInfoWindow(title,content));
-            }
-
-            //infoWindow.setContent(me.createInfoWindow("555","666"));
-        });
+        //AMap.event.addListener(marker,'click',function(){
+        //    infoWindow.open(me.map,marker.getPosition());
+        //
+        //    if(type !="sw" && type !="yl") {
+        //        me.getStoreProInfo(stcd, infoWindow, stnm, me, type);
+        //    }
+        //    else
+        //    {
+        //        title = stnm;
+        //        content = "水位雨量站详细信息正在完善中..."
+        //        infoWindow.setContent(me.createInfoWindow(title,content));
+        //    }
+        //
+        //    //infoWindow.setContent(me.createInfoWindow("555","666"));
+        //});
 
         marker.setPosition(new AMap.LngLat(lng,lat));
 

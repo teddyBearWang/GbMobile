@@ -208,9 +208,10 @@ Ext.define('YzMobile.controller.RainControl', {
     onRainDetailLoad: function (record, date, index) {
         var me = this;
         var store = Ext.getStore('RainDetailStore');
-
         Ext.data.proxy.SkJsonp.setUrl(localStorage.getItem('proxyUrl'));
         Ext.data.proxy.SkJsonp.loadStore(store, 'GetStDayYL', record.data.stcd + '$' + date);
+        me.getRainbar().onRainSetTitle(date+'雨量柱状图');
+
         //store.removeAll();
         //store.getProxy().setExtraParams({
         //    t: 'GetStDayYL',
@@ -255,6 +256,10 @@ Ext.define('YzMobile.controller.RainControl', {
         var store = Ext.getStore('RainDetailStore');
         Ext.data.proxy.SkJsonp.setUrl(localStorage.getItem('proxyUrl'));
         Ext.data.proxy.SkJsonp.loadStore(store, 'GetStDayLjYl', me.stcd + '$' + start + '$' + end);
+        me.getRainbar().onRainSetTitle(start + '$' + end+'雨量柱状图');
+
+       // me.getRainbar().onRainDayDetailValue(start + '至' + end, store);
+
         //store.removeAll();
         //store.getProxy().setExtraParams({
         //    t: 'GetStDayLjYl',

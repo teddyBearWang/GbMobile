@@ -44,7 +44,7 @@ Ext.define('YzMobile.view.DateSelect',{
                         label: '开始时间',
                         name: 'startdate',
                         itemId: 'startdate',
-                        value: Ext.Date.add(new Date(),Ext.Date.DAY,-1),
+                        value: Ext.Date.add(new Date(),Ext.Date.DAY,-7),
                         picker: {
                             //dayText: '日',
                             //monthText: '月',

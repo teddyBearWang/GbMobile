@@ -25,7 +25,7 @@ Ext.define('YzMobile.view.flood.MainInfo', {
             '<div style="width:70%;height:100%;float:right;text-align: center;">',
            // '</div>',
             '</div>',
-            '<div style="min-height:4.4em;margin:0 10px 10px 10px; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center; color: #333;">',
+            '<div style="min-height:4.4em;margin:10px 10px 10px 10px; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center; color: #333;">',
             '<div style="height:2.2em; width: 100%; border-bottom: 1px #ccc solid;">',
             '<div style="height: 100%; width: 30%; float:left;">1小时降雨值</div>',
             '<div style="height: 100%; width: 35%; float:left;">3小时降雨值</div>',
@@ -106,7 +106,13 @@ Ext.define('YzMobile.view.flood.MainInfo', {
 
                 //获取最大降雨值
                 getMaxRain: function (value) {
-                    return value;
+                    if(value > 0)
+                    {
+                        return '<span style="color:#ff0000">'+value+'</span>'
+                    }else{
+                        return value;
+
+                    }
                 },
 
                 getWarn: function (value) {
